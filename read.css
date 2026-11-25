@@ -1,0 +1,132 @@
+body {
+    font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    background: #FAF7F2;
+    color: #4A4540;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+h1 { color: #4A4540; text-align: center; }
+.hint { text-align: center; color: #6B6560; font-style: italic; margin-bottom: 30px; }
+
+/* Меню навигации */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #D4A373;
+}
+.nav-link {
+    text-decoration: none;
+    color: #6B6560;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+.nav-link:hover { background: #F0E8DC; color: #4A4540; }
+.nav-link.active { background: #D4A373; color: #FFFFFF; font-weight: bold; }
+
+/* Стили текстов */
+.text-block {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(74, 69, 64, 0.08);
+}
+.text-title {
+    font-size: 22px;
+    color: #8A9A5B;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+.sentence {
+    font-size: 24px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px;
+}
+.word {
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    position: relative;
+}
+.word:hover { background: #F0E8DC; }
+.word-hanzi { color: #4A4540; }
+.word-hint {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4A4540;
+    color: #FAF7F2;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.word-hint::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #4A4540 transparent transparent transparent;
+}
+.word.active .word-hint { display: block; }
+.word.active { background: #F0E8DC; }
+.punctuation { color: #4A4540; margin-right: 2px; }
+
+/* Новые стили для кнопки и полного перевода */
+.toggle-btn {
+    background: none;
+    border: 1px solid #D4A373;
+    color: #D4A373;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: all 0.2s;
+}
+.toggle-btn:hover {
+    background: #D4A373;
+    color: #FFFFFF;
+}
+.full-translation {
+    display: none;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #D4A373;
+    line-height: 1.6;
+}
+.full-translation.visible {
+    display: block;
+}
+.full-translation-pinyin {
+    color: #D4A373; /* Песочный цвет для пиньиня */
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.full-translation-text {
+    color: #6B6560;
+    font-style: italic;
+    font-size: 18px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Переводи (译)</title>
+    <link rel="stylesheet" href="translate.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+    <a href="cards.html" class="nav-link">Карточки (汉字)</a>
+    <a href="read.html" class="nav-link">Читай (读)</a>
+    <a href="translate.html" class="nav-link active">Переводи (译)</a>
+    <a href="grammar.html" class="nav-link">Запомни (记)</a>
+    <a href="write.html" class="nav-link">Пиши (写)</a>
+</nav>
+
+        <h1>Выбери правильный перевод</h1>
+        
+        <div class="controls">
+            <label for="deck-select">Колода:</label>
+            <select id="deck-select"></select>
+        </div>
+
+        <div class="quiz-container">
+            <div class="question" id="question">
+                <!-- Здесь будет иероглиф или предложение -->
+            </div>
+            
+            <div class="options" id="options">
+                <!-- Здесь будут 4 кнопки с вариантами -->
+            </div>
+
+            <div class="pinyin-reveal" id="pinyin-reveal">
+    <!-- Здесь появится пиньинь после ответа -->
+</div>
+
+<div class="feedback" id="feedback">
+    <!-- Здесь будет сообщение о правильности ответа -->
+</div>
+
+            <button class="next-btn" id="next-btn" style="display: none;">Следующий вопрос →</button>
+        </div>
+
+        <div class="stats">
+            <span id="correct-count">Правильно: 0</span>
+            <span id="total-count">Всего: 0</span>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="translate.js"></script>
+</body>
+</html>

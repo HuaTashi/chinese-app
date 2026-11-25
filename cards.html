@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Карточки (汉字)</title>
+    <link rel="stylesheet" href="cards.css">
+</head>
+<body>
+    <div class="container">
+<nav class="main-nav">
+    <a href="cards.html" class="nav-link active">Карточки (汉字)</a>
+    <a href="read.html" class="nav-link">Читай (读)</a>
+    <a href="translate.html" class="nav-link">Переводи (译)</a>
+    <a href="grammar.html" class="nav-link">Запомни (记)</a>
+    <a href="write.html" class="nav-link">Пиши (写)</a>
+</nav>
+        <h1>Карточки (汉字)</h1>
+        
+        <div class="controls">
+            <label for="deck-select">Выбери колоду:</label>
+            <select id="deck-select"></select>
+        </div>
+
+        <div class="card-container" id="card-container">
+            <div class="card" id="card">
+                <div class="card-front" id="card-front">
+                    <!-- Сюда попадёт иероглиф -->
+                </div>
+                <div class="card-back" id="card-back">
+                    <!-- Сюда попадёт перевод и пиньинь -->
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons" id="buttons" style="display: none;">
+    <button class="btn btn-bad" onclick="rateCard('bad')">😣 Не знаю</button>
+    <button class="btn btn-mid" onclick="rateCard('mid')">🤔 Неуверенно</button>
+    <button class="btn btn-good" onclick="rateCard('good')">😊 Знаю</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="cards.js"></script>
+</body>
+</html>

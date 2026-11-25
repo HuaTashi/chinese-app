@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Пиши (写)</title>
+    <link rel="stylesheet" href="write.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+    <a href="cards.html" class="nav-link">Карточки (汉字)</a>
+    <a href="read.html" class="nav-link">Читай (读)</a>
+    <a href="translate.html" class="nav-link">Переводи (译)</a>
+    <a href="grammar.html" class="nav-link">Запомни (记)</a>
+    <a href="write.html" class="nav-link active">Пиши (写)</a>
+</nav>
+
+        <h1>Напиши иероглиф</h1>
+        <p class="hint">Введи правильный иероглиф (или слово) по русскому переводу.</p>
+        
+        <div class="controls">
+            <label for="deck-select">Колода:</label>
+            <select id="deck-select"></select>
+        </div>
+
+        <div class="quiz-container">
+            <div class="question" id="question">
+                <!-- Здесь будет русский перевод -->
+            </div>
+            
+            <input type="text" id="answer-input" class="answer-input" placeholder="Введи иероглиф здесь..." autocomplete="off">
+            
+            <button class="check-btn" id="check-btn">Проверить</button>
+
+            <div class="feedback" id="feedback">
+                <!-- Здесь будет сообщение о правильности -->
+            </div>
+
+            <button class="next-btn" id="next-btn" style="display: none;">Следующее слово →</button>
+        </div>
+
+        <div class="stats">
+            <span id="correct-count">Правильно: 0</span>
+            <span id="total-count">Всего: 0</span>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="write.js"></script>
+</body>
+</html>

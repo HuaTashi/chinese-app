@@ -1,0 +1,131 @@
+body {
+    font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    background: #FAF7F2;
+    color: #4A4540;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+h1 {
+    color: #4A4540;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.hint {
+    text-align: center;
+    color: #6B6560;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+/* Навигация */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #D4A373;
+}
+.nav-link {
+    text-decoration: none;
+    color: #6B6560;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+.nav-link:hover { background: #F0E8DC; color: #4A4540; }
+.nav-link.active { background: #D4A373; color: #FFFFFF; font-weight: bold; }
+
+/* Карточки грамматики */
+.grammar-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(74, 69, 64, 0.08);
+    border-left: 6px solid #8A9A5B; /* Травянисто-зелёная полоска слева */
+}
+.grammar-title {
+    color: #8A9A5B; /* Зелёный заголовок */
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #D4A373;
+    padding-bottom: 10px;
+}
+.grammar-intro {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.grammar-rules {
+    background: #F0F7F0; /* Очень светлый зелёный фон для правил */
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.grammar-rules ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.grammar-rules li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.grammar-rules li:last-child {
+    margin-bottom: 0;
+}
+.grammar-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.example-item {
+    background: #FAF7F2;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #E8E0D5;
+}
+.example-hanzi {
+    font-size: 22px;
+    color: #4A4540;
+    margin-bottom: 5px;
+}
+.example-pinyin {
+    font-size: 16px;
+    color: #D4A373;
+    margin-bottom: 5px;
+}
+.example-ru {
+    font-size: 16px;
+    color: #6B6560;
+    font-style: italic;
+}
+
+   /* Кнопка "Наверх" */
+   #scrollToTopBtn {
+       display: none; /* Скрыта по умолчанию */
+       position: fixed;
+       bottom: 30px;
+       right: 30px;
+       z-index: 99; /* Чтобы была поверх всего */
+       border: none;
+       outline: none;
+       background-color: #8A9A5B; /* Травянисто-зелёный */
+       color: white;
+       cursor: pointer;
+       padding: 12px 16px;
+       border-radius: 50%; /* Делаем круглой */
+       font-size: 20px;
+       box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Мягкая тень */
+       transition: background-color 0.3s, transform 0.2s;
+   }
+   #scrollToTopBtn:hover {
+       background-color: #75854a; /* Чуть темнее при наведении */
+       transform: translateY(-3px); /* Чуть всплывает */
+   }
