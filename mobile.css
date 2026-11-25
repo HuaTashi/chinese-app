@@ -1,0 +1,69 @@
+/* Мобильные стили для экранов меньше 768px */
+@media (max-width: 768px) {
+    /* Меню навигации */
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+    .nav-link {
+        font-size: 14px;
+        padding: 6px 10px;
+        white-space: nowrap;
+    }
+    
+    /* Контейнеры */
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    /* Заголовки */
+    h1 {
+        font-size: 24px;
+    }
+    
+    /* Карточки и блоки */
+    .quiz-container, .text-block, .grammar-card {
+        padding: 15px;
+    }
+    
+    /* Кнопки вариантов ответа */
+    .options {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .option-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    /* Поле ввода в разделе "Пиши" */
+    .answer-input {
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    /* Иероглиф в карточках */
+    .hanzi {
+        font-size: 48px;
+    }
+    
+    /* Текст в разделе "Читай" */
+    .sentence {
+        font-size: 20px;
+    }
+    
+    /* Кнопки */
+    .check-btn, .next-btn {
+        width: 100%;
+        padding: 12px;
+    }
+    
+    /* Статистика */
+    .stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
